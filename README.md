@@ -25,3 +25,4 @@ THEN I am presented with a series of information for the following:
 	- Similar rental listings
 ```
 
+Realtor API: https://rapidapi.com/apidojo/api/realtor?endpoint=apiendpoint_e1609ab1-2d1f-4f71-9dc7-c52a7a27bf9a
