@@ -6,19 +6,18 @@ var lat = 41.549289;
 var lon = -72.711875;
 var city = "";
 var state = "";
+var chips = `<div class='mdc-chip' role='row'><div class='mdc-chip__ripple'>
+                </div>
+                <span role='gridcell'><span role='button' tabindex='0' class='mdc-chip__primary-action'>
+                <span class='mdc-chip__text' id='chip'>test</span>
+                </span>
+                </span>
+                </div>`
 
 $("#confirmMls").click(function () {
 // AJAX for gathering data by MLS listing.
 var input = $("#mls").val();
 console.log(input);
-
-var chips = `<div class='mdc-chip' role='row'><div class='mdc-chip__ripple'>
-            </div>
-            <span role='gridcell'><span role='button' tabindex='0' class='mdc-chip__primary-action'>
-            <span class='mdc-chip__text'>test</span>
-            </span>
-            </span>
-            </div>`
 
 var settings = {
 	"async": true,
@@ -27,12 +26,12 @@ var settings = {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "realtor.p.rapidapi.com",
-		"x-rapidapi-key": "d265b5649amsh437c6a95e9ae058p18029ejsn1f0b36868d${chips}${chips}9",
+		"x-rapidapi-key": "d265b5649amsh437c6a95e9ae058p18029ejsn1f0b36868dc9",
 	}
 };
 
 $.ajax(settings).done(function (response) {
-    console.log(response);
+    // console.log(response);
     mlsId = response.listings[0].mls.id;
     lat = response.listings[0].lat;
     lon = response.listings[0].lon;
@@ -49,9 +48,9 @@ $.ajax(settings).done(function (response) {
     var fullBaths = response.listings[0].baths_full;
     var beds = response.listings[0].beds;
     var saleStatus = response.listings[0].prop_status;
-    var vTour = response.listings[0].virtual_tour.href;
+    // var vTour = response.listings[0].virtual_tour.href;
 
-    var addPhoto = $("<img>").attr("src", "" + mlsPhoto).attr("class", "img-center");
+    var addPhoto = $("<img>").attr("src", "" + mlsPhoto).attr("class", "center");
     var addAddress = $("<p>").text("Address: " + mlsAddress);
     var addPrice = $("<p>").text("Asking Price: " + mlsPrice);
     var addSqft = $("<p>").text("SqFt: " + mlsSqft);
@@ -60,10 +59,12 @@ $.ajax(settings).done(function (response) {
     var addFullBaths = $("<p>").text("Number of Full Baths: " + fullBaths);
     var addBeds = $("<p>").text("Number of Beds: " + beds);
     var addSaleStatus = $("<p>").text("Status: " + saleStatus);
-    
-    $("#chips").html(`<div>${chips}</div>`)
+    // var chipParent = $("<div>").attr("class", "mdc-chip-set").attr("role", "grid").attr("class", "center").html(`<div>${chips}</div>`);
+
     $("#myHome").append(addPhoto);
     $("#myHome").append(addAddress, addPrice, addSqft, addPropType, addBaths, addFullBaths, addBeds, addSaleStatus);
+    // $("#myHome").append(chipParent);
+    // $("#chip").text("Address: " + mlsAddress);
 
     });
 });
