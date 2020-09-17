@@ -7,20 +7,32 @@ var lon = -72.711875;
 var city = "";
 var state = "";
 
+$("#confirmMls").click(function () {
 // AJAX for gathering data by MLS listing.
+var input = $("#mls").val();
+console.log(input);
+
+var chips = `<div class='mdc-chip' role='row'><div class='mdc-chip__ripple'>
+            </div>
+            <span role='gridcell'><span role='button' tabindex='0' class='mdc-chip__primary-action'>
+            <span class='mdc-chip__text'>test</span>
+            </span>
+            </span>
+            </div>`
+
 var settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://realtor.p.rapidapi.com/properties/list-by-mls?mls_id=" + mlsId + "&offset=0&limit=10",
+	"url": "https://realtor.p.rapidapi.com/properties/list-by-mls?mls_id=" + input + "&offset=0&limit=10",
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "realtor.p.rapidapi.com",
-		"x-rapidapi-key": "d265b5649amsh437c6a95e9ae058p18029ejsn1f0b36868dc9",
+		"x-rapidapi-key": "d265b5649amsh437c6a95e9ae058p18029ejsn1f0b36868d${chips}${chips}9",
 	}
 };
 
 $.ajax(settings).done(function (response) {
-    // console.log(response);
+    console.log(response);
     mlsId = response.listings[0].mls.id;
     lat = response.listings[0].lat;
     lon = response.listings[0].lon;
@@ -39,7 +51,7 @@ $.ajax(settings).done(function (response) {
     var saleStatus = response.listings[0].prop_status;
     var vTour = response.listings[0].virtual_tour.href;
 
-    var addPhoto = $("<img>").attr("src", "" + mlsPhoto);
+    var addPhoto = $("<img>").attr("src", "" + mlsPhoto).attr("class", "img-center");
     var addAddress = $("<p>").text("Address: " + mlsAddress);
     var addPrice = $("<p>").text("Asking Price: " + mlsPrice);
     var addSqft = $("<p>").text("SqFt: " + mlsSqft);
@@ -49,9 +61,11 @@ $.ajax(settings).done(function (response) {
     var addBeds = $("<p>").text("Number of Beds: " + beds);
     var addSaleStatus = $("<p>").text("Status: " + saleStatus);
     
-    $("body").append(addPhoto);
-    $("body").append(addAddress, addPrice, addSqft, addPropType, addBaths, addFullBaths, addBeds, addSaleStatus);
+    $("#chips").html(`<div>${chips}</div>`)
+    $("#myHome").append(addPhoto);
+    $("#myHome").append(addAddress, addPrice, addSqft, addPropType, addBaths, addFullBaths, addBeds, addSaleStatus);
 
+    });
 });
 
 
@@ -92,8 +106,10 @@ $("#similarTo").click(function () {
             var addBaths = $("<p>").text("Number of Baths: " + simBaths);
             var addBeds = $("<p>").text("Number of Beds: " + simBeds);
 
-            $("body").append(addPhoto);
-            $("body").append(addAddress, addCity, addPrice, addSqft, addBaths, addBeds, addLink);
+            $("<div>").attr("class", "mdc-card").attr("tabindex", "0");
+
+            $("#loadedContent").append(addPhoto);
+            $("#loadedContent").append(addAddress, addCity, addPrice, addSqft, addBaths, addBeds, addLink);
 
         };
     });
@@ -135,7 +151,7 @@ $("#schools").click(function () {
             var addTeachers = $("<p>").text("Student/Teacher Ratio: " + teacherRatio);
             var addDistance = $("<p>").text("Distance from Home: " + distance + " m");
 
-            $("body").append(addName, addType, addLevel, addRating, addParentRating, addStudents, addTeachers, addDistance);
+            $("#loadedContent").append(addName, addType, addLevel, addRating, addParentRating, addStudents, addTeachers, addDistance);
         };
     });
 });
