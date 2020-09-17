@@ -3,15 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"/>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
+    <link rel="stylesheet" href="./syle.css"/>
     <title>Document</title>
 </head>
-<body>
+<body class="mdc-typography">
+  <div class="mdc-tab-bar" role="tablist">
+    <div class="mdc-tab-scroller">
+      <div class="mdc-tab-scroller__scroll-area">
+        <div class="mdc-tab-scroller__scroll-content">
+          <button class="mdc-tab mdc-tab--active" id="schools" role="tab" aria-selected="true" tabindex="0">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__text-label">School ratings</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple"></span>
+          </button>
+          <button class="mdc-tab mdc-tab--active" id="similarTo" role="tab" aria-selected="true" tabindex="0">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__text-label">Similar Properties</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple"></span>
+          </button>
+          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__text-label">Similar Rentals</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<button id="similarTo">Similar Houses</button>
-<button id="schools">Schools</button>
+<div>
+  <!-- Here we create an HTML Form for handling the inputs-->
+    <br>
+    <style>
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    </style>
+    
+    <!-- Here we create the text box for capturing the search term-->
+    <div class="form-group">
+      <input type="text" placeholder="MLS Number" id="mls" value="">
 
-<script src="./script_project_one.js">
-</script>
+
+      <br>
+      <br>
+      <div class="mdc-text-field mdc-text-field--outlined">
+        <button class="mdc-button mdc-button--raised" id="confirmMls">
+        <span class="mdc-button__ripple">
+        </span> Confirm MLS #</button>               
+    </div> 
+    <br>
+    <!--<button class="btn btn-default" id="clear-all">-->
+    <button class="mdc-button mdc-button--outlined">  <span class="mdc-button__ripple"></span> Clear Results</button>
+    <br>
+    <br>
+
+    <!-- Here we capture the number of records that the user wants to retrieve
+    <div class="form-group">
+      <label for="pwd">Please Select Radius (miles):</label>
+      <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <option selected value="1">1</option>
+        Setting the option for 5 as default
+        <option value="5" selected>5</option>
+        <option value="10">10</option>
+      </select>
+    </div>-->
+</div>
+
+<div class="container" id="myHome">
+</div>
+
+<div class="container" id="loadedContent">
+</div>
+
+
+<div class="mdc-chip-set" role="grid" id="chip">
+</div>
+<!--
+  <div class='mdc-chip' role='row'>
+    <div class='mdc-chip__ripple'></div>
+    <span role='gridcell'>
+      <span role='button' tabindex='0' class='mdc-chip__primary-action'>
+        <span class='mdc-chip__text'></span>
+      </span>
+    </span>
+  </div>
+-->
+
+<script src="./script_project_one.js"></script>
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </body>
 </html>
