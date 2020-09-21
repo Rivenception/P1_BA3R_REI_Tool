@@ -1,89 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
     <!--CSS-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"/>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"/>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/> -->
-    <link rel="stylesheet" href="./assets/syle.css"/>
+    <link rel="stylesheet" href="./assets/syle.css" />
     <title>Ba3R: Real Estate Inveting Tool</title>
 </head>
 
-<body class="mdc-typography" style="background-color: #fdfefe; background-image: url(assets/photos/BAER.png); background-size: contain; background-position: center; display: block;">
+<body class="mdc-typography"
+    style="background-color: #fdfefe; background-image: url(assets/photos/BAER.png); background-size: contain; background-position: center; display: block;">
 
-  <header class="mdc-top-app-bar mdc-top-app-bar--short">
-    <div class="mdc-top-app-bar__row">
-      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <!-- <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button> -->
-        <!-- Left aligned menu below button -->
-        <button id="demo-menu-lower-left"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">more_vert</i>
-        </button>
+    <header class="mdc-top-app-bar mdc-top-app-bar--short">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <!-- <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button> -->
+                <!-- Left aligned menu below button -->
+                <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">more_vert</i>
+                </button>
 
-        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-        for="demo-menu-lower-left">
-        <li class="mdl-menu__item">SCHOOL RATINGS
-          <a href="#schools"></a>
-        </li>
-        <li class="mdl-menu__item">SIMILAR PROPERTIES
-          <a href="#similarTo"></a>
-        </li>
-        </ul>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+                    <li class="mdl-menu__item">SCHOOL RATINGS
+                        <a href="#schools"></a>
+                    </li>
+                    <li class="mdl-menu__item">SIMILAR PROPERTIES
+                        <a href="#similarTo"></a>
+                    </li>
+                </ul>
 
-        <span class="mdc-top-app-bar__title">Ba3R: A Real Estate Inveting Tool</span>
-      </section>
-      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-        <a href="#top">
-          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search
-          </button>
-        </a>
-        <!-- <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button> -->
-      </section>
+                <span class="mdc-top-app-bar__title">Ba3R: A Real Estate Inveting Tool</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a href="#top">
+                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+                        aria-label="Search">search
+                    </button>
+                </a>
+                <!-- <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button> -->
+            </section>
+        </div>
+    </header>
+
+    <div class="container-outer" style="height: 55px;">
+        <div class="container-inner">
+            hidden text
+            <br>
+            hidden text
+        </div>
     </div>
-  </header>
-
-  <div class="container-outer" style="height: 55px;">
-    <div class="container-inner">
-      hidden text
-      <br>
-      hidden text
-    </div>
-  </div>
 
     <div class="mdc-tab-bar" role="tablist">
-      <div class="mdc-tab-scroller" style="background-color: #fdfefe">
-        <div class="mdc-tab-scroller__scroll-area">
-          <div class="mdc-tab-scroller__scroll-content">
-            <button class="mdc-tab mdc-tab--active" id="schools" role="tab" aria-selected="true" tabindex="0">
-              <span class="mdc-tab__content">
-                <span class="mdc-tab__text-label">School ratings</span>
-              </span>
-              <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-              </span>
-              <span class="mdc-tab__ripple"></span>
-            </button>
-            <button class="mdc-tab mdc-tab--active" id="similarTo" role="tab" aria-selected="true" tabindex="0">
-              <span class="mdc-tab__content">
-                <span class="mdc-tab__text-label">Similar Properties</span>
-              </span>
-              <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-              </span>
-              <span class="mdc-tab__ripple"></span>
-            </button>
-            <!--
+        <div class="mdc-tab-scroller" style="background-color: #fdfefe">
+            <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                    <button class="mdc-tab mdc-tab--active" id="schools" role="tab" aria-selected="true" tabindex="0">
+                        <span class="mdc-tab__content">
+                            <span class="mdc-tab__text-label">School ratings</span>
+                        </span>
+                        <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <button class="mdc-tab mdc-tab--active" id="similarTo" role="tab" aria-selected="true" tabindex="0">
+                        <span class="mdc-tab__content">
+                            <span class="mdc-tab__text-label">Similar Properties</span>
+                        </span>
+                        <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <!-- add if we build out to rentals
             <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
               <span class="mdc-tab__content">
                 <span class="mdc-tab__text-label">Similar Rentals</span>
@@ -94,38 +90,50 @@
               <span class="mdc-tab__ripple"></span>
             </button>
             -->
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Here we create an HTML Form for handling the inputs-->
 
-      <style>
-      h1 {text-align: center;}
-      p {text-align: center;}
-      div {text-align: center;}
-      a {text-align: center;}
-      </style>
-      
-      <!-- Here we create the text box for capturing the search term-->
-      <br>
-      <div class="form-group">
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        a {
+            text-align: center;
+        }
+    </style>
+
+    <!-- Here we create the text box for capturing the search term-->
+    <br>
+    <div class="form-group">
         <input type="text" placeholder="MLS Number" id="mls" value="">
         <br>
         <br>
         <div class="mdc-text-field mdc-text-field--outlined">
-          <button class="mdc-button mdc-button--raised" id="confirmMls">
-          <span class="mdc-button__ripple">
-          </span> Confirm MLS #</button>               
-      </div> 
-      <br>
-      <!--<button class="btn btn-default" id="clear-all">-->
-      <button class="mdc-button mdc-button--outlined" style="background-color: #fdfefe">  <span class="mdc-button__ripple" id="clearBtn"></span> Clear Results</button>
-      <br>
-      <br>
+            <button class="mdc-button mdc-button--raised" id="confirmMls">
+                <span class="mdc-button__ripple">
+                </span> Confirm MLS #</button>
+        </div>
+        <br>
+        <!--<button class="btn btn-default" id="clear-all">-->
+        <button class="mdc-button mdc-button--outlined" style="background-color: #fdfefe"> <span
+                class="mdc-button__ripple" id="clearBtn"></span> Clear Results</button>
+        <br>
+        <br>
 
-      <!-- Here we capture the number of records that the user wants to retrieve
+        <!-- Here we capture the number of records that the user wants to retrieve
       <div class="form-group">
         <label for="pwd">Please Select Radius (miles):</label>
         <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
@@ -135,36 +143,37 @@
           <option value="10">10</option>
         </select>
       </div>-->
-  </div>
-
-  <div class="mdl-card hidden" id="myHome" style="background-color: #fdfefe; margin: 0 auto; width: 300px; margin-bottom: 15px;">
-    <div class="mdl-card__supporting-text" id="homeCard" style="width: 100%;">
     </div>
-  </div>
 
-  <section class="comps mdl-grid">
+    <div class="mdl-card hidden" id="myHome"
+        style="background-color: #fdfefe; margin: 0 auto; width: 300px; margin-bottom: 15px;">
+        <div class="mdl-card__supporting-text" id="homeCard" style="width: 100%;">
+        </div>
+    </div>
+
+    <section class="comps mdl-grid">
     <!-- <div class="mdl-card hidden" id="mySims" style="background-color: #fdfefe; margin: 0 auto; width: 300px;">
       <div class="mdl-card__supporting-text" id="simCard">
       </div>
     </div> -->
-  </section>
+    </section>
 
-  <!-- Basic Chip HTML
+    <!-- Basic Chip HTML
   <span class="mdl-chip">
     <span class="mdl-chip__text">Basic Chip</span>
   </span>
   -->
 
-  <div class="hidden" id="demo">
-    <!-- <h1>Nearby School Statistics</h1> -->
+    <div class="hidden" id="demo">
+        <!-- <h1>Nearby School Statistics</h1> -->
 
-    <!-- Responsive table starts here -->
-    <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-    <div class="table-responsive-vertical">
-    <!-- Table starts here -->
-    <table id="table" class="table table-hover table-mc-purple">
-        <thead>
-          <!--
+        <!-- Responsive table starts here -->
+        <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+        <div class="table-responsive-vertical">
+            <!-- Table starts here -->
+            <table id="table" class="table table-hover table-mc-purple">
+                <thead>
+                    <!--
           <tr>
             <th>Name</th>
             <th>Type</th>
@@ -176,16 +185,16 @@
             <th>Distance From Home</th>
           </tr>
           -->
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
-  </div>
 
 
-<script src="./script_project_one.js"></script>
-<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="./assets/script.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </body>
 
 <!--
