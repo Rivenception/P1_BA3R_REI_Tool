@@ -39,11 +39,10 @@ If we were to continue to build out this concept we would start by adding more f
 
 ```
 
-API: https://rapidapi.com/apidojo/api/realtor?endpoint=apiendpoint_e1609ab1-2d1f-4f71-9dc7-c52a7a27bf9a
-<a href="https://rapidapi.com/apidojo/api/realtor?endpoint=apiendpoint_e1609ab1-2d1f-4f71-9dc7-c52a7a27bf9a">Rapid API: Realtor.com</a>
+API: <a href="https://rapidapi.com/apidojo/api/realtor?endpoint=apiendpoint_e1609ab1-2d1f-4f71-9dc7-c52a7a27bf9a">Rapid API: Realtor.com</a>
 
-CSS: https://getmdl.io/index.html
-<a href="https://rapidapi.com/apidojo/api/realtor?endpoint=apiendpoint_e1609ab1-2d1f-4f71-9dc7-c52a7a27bf9a">Material Design Lite</a>
+CSS: <a href="https://getmdl.io/index.html">Material Design Lite</a>
 
-Depployed Final Product:
-<a href="https://rivenception.github.io/BA3R_REI_Tool/">BA3R: REI Tool</a>
+Depployed Final Product: <a href="https://rivenception.github.io/BA3R_REI_Tool/">BA3R: REI Tool</a>
+
+<img href="./assets/gif/be3r.gif">
