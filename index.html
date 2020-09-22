@@ -13,10 +13,12 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="./assets/syle.css" />
     <title>Ba3R: Real Estate Inveting Tool</title>
+    <link rel="shortcut icon" type="image/png" href="assets/photos/Flavicon.png">
 </head>
 
-<body class="mdc-typography"
-    style="background-color: #fdfefe; background-image: url(assets/photos/BAER.png); background-size: contain; background-position: center; display: block;">
+<body class="mdc-typography" style="background-color: #fdfefe; background-image: url(assets/photos/BA3R-2.png); background-size: contain; background-position: center; display: block;">
+
+    <!-- assets/photos/BA3R-2.png -->
 
     <header class="mdc-top-app-bar mdc-top-app-bar--short">
         <div class="mdc-top-app-bar__row">
@@ -80,16 +82,16 @@
                         <span class="mdc-tab__ripple"></span>
                     </button>
                     <!-- add if we build out to rentals
-            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-              <span class="mdc-tab__content">
-                <span class="mdc-tab__text-label">Similar Rentals</span>
-              </span>
-              <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-              </span>
-              <span class="mdc-tab__ripple"></span>
-            </button>
-            -->
+                    <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                    <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Similar Rentals</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                    </button>
+                    -->
                 </div>
             </div>
         </div>
@@ -134,15 +136,15 @@
         <br>
 
         <!-- Here we capture the number of records that the user wants to retrieve
-      <div class="form-group">
-        <label for="pwd">Please Select Radius (miles):</label>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
-          <option selected value="1">1</option>
-          Setting the option for 5 as default
-          <option value="5" selected>5</option>
-          <option value="10">10</option>
-        </select>
-      </div>-->
+        <div class="form-group">
+            <label for="pwd">Please Select Radius (miles):</label>
+            <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+            <option selected value="1">1</option>
+            Setting the option for 5 as default
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            </select>
+        </div>-->
     </div>
 
     <div class="mdl-card hidden" id="myHome"
@@ -153,18 +155,23 @@
 
     <section class="comps mdl-grid">
     <!-- <div class="mdl-card hidden" id="mySims" style="background-color: #fdfefe; margin: 0 auto; width: 300px;">
-      <div class="mdl-card__supporting-text" id="simCard">
-      </div>
+    <div class="mdl-card__supporting-text" id="simCard">
+    </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Get Started
+            </a>
+        </div>
     </div> -->
     </section>
 
     <!-- Basic Chip HTML
-  <span class="mdl-chip">
-    <span class="mdl-chip__text">Basic Chip</span>
-  </span>
-  -->
+    <span class="mdl-chip">
+        <span class="mdl-chip__text">Basic Chip</span>
+    </span>
+    -->
 
-    <div class="hidden" id="demo">
+    <div class="hidden" id="demo" style="background-color: white;">
         <!-- <h1>Nearby School Statistics</h1> -->
 
         <!-- Responsive table starts here -->
@@ -174,17 +181,17 @@
             <table id="table" class="table table-hover table-mc-purple">
                 <thead>
                     <!--
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Grade Level</th>
-            <th>Good Grades Rating</th>
-            <th>Parent Rating</th>
-            <th>Student/Teacher Ratio</th>
-            <th>Student Body Size</th>
-            <th>Distance From Home</th>
-          </tr>
-          -->
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Grade Level</th>
+                <th>Good Grades Rating</th>
+                <th>Parent Rating</th>
+                <th>Student/Teacher Ratio</th>
+                <th>Student Body Size</th>
+                <th>Distance From Home</th>
+            </tr>
+            -->
                 </thead>
                 <tbody>
                 </tbody>
@@ -192,6 +199,9 @@
         </div>
     </div>
 
+    <!-- MDL Spinner Component with Single Color -->
+    <div class="loading">
+    </div>
 
     <script src="./assets/script.js"></script>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
@@ -199,13 +209,13 @@
 
 <!--
 <footer class="mdl-mini-footer" style="bottom: 0; position: fixed; width: 100%; background-color: #6200ee; height: 50px;">
-  <div class="mdl-mini-footer__left-section">
-    <div class="mdl-logo">Title</div>
-    <ul class="mdl-mini-footer__link-list">
-      <li><a href="#">Help</a></li>
-      <li><a href="#">Privacy & Terms</a></li>
-    </ul>
-  </div>
+    <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">Title</div>
+        <ul class="mdl-mini-footer__link-list">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy & Terms</a></li>
+        </ul>
+    </div>
 </footer>
 -->
 

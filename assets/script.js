@@ -52,7 +52,7 @@ function myHome (response) {
     var chipArray = ["Price Per SqFt", "Sqft", "Type", "Baths", "Full Baths", "Beds", "Status"];
     var responseArray = [("$" +pricePerSF), mlsSqft, propType, baths, fullBaths, beds, saleStatus];
 
-    $("#myHome").prepend(mlsPrice);
+    $("#myHome").prepend("$" + mlsPrice_Raw);
     $("#myHome").prepend(addAddress);
     $("#myHome").prepend(addPhoto);
 
@@ -93,7 +93,7 @@ function simHomes (response) {
         var simBaths = response.data.home.related_homes.results[x].description.baths;
         var simBeds = response.data.home.related_homes.results[x].description.beds;
 
-        var addPhoto = $("<img>").attr("src", "" + simPhoto).attr("style", "object-fit: cover; max-width: 300px;");
+        var addPhoto = $("<img>").attr("src", "" + simPhoto).attr("style", "object-fit: cover; max-width: 300px; max-height: 200px; overflow: hidden;");
         var addAddress = $("<p>").text(simAddress).attr("style", "font-weight:bolder; font-size:15pt; margin-top: 15px;");
         // var addCity = $("<p>").text(simCity).attr("style", "font-weight:bolder; font-size:12pt;");
         // var addLink = $("<a>").attr("href", "" + simLink).attr("target", "_blank").text("More Details on Realtor.com");
@@ -108,6 +108,8 @@ function simHomes (response) {
         // var gridParent = $("<div>").attr("class", "mdl-cell mdl-cell--2-col mdl-cell--4-col-phone graybox");
         var simCard = $("<div>").attr("class", "mdl-card mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-cell--4-col-phone graybox").attr("id", "mySims" + x).attr("style", "background-color: #fdfefe; margin: 0 auto; width: 300px; margin-bottom: 10px;");
         var chipWrapper = $("<div>").attr("class", "mdl-card__supporting-text").attr("style", "width: 100%;").attr("id", "chip" + x);
+        var linkWrapper = $("<div>").attr("class", "mdl-card__actions mdl-card--border");
+        var linkRealtor = $("<a>").attr("class", "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect").attr("href", simLink).attr("target", "_blank").text("Realtor.com Listing");
 
         var pricePerSF = Math.round(simPrice / simSqft);
 
@@ -117,6 +119,7 @@ function simHomes (response) {
         $("#mySims" + x).prepend(addPhoto);
         $("#mySims" + x).append("$" + simPrice);
         $("#mySims" + x).append(chipWrapper);
+        $("#mySims" + x).append(linkWrapper).append(linkRealtor);
 
         var chipArray = ["Price Per SqFt", "Sqft", "Baths", "Beds"];
         var responseArray = [("$" + pricePerSF), simSqft, simBaths, simBeds];
@@ -199,6 +202,8 @@ $("#similarTo").click(function () {
 
 // AJAX for gathering data for school systems
 $("#schools").click(function () {
+
+    console.log("Searching Similar Schools...")
 
     $("#demo").attr("class", "show");
 
