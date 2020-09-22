@@ -45,6 +45,6 @@ CSS: <a href="https://getmdl.io/index.html">Material Design Lite</a>
 
 Deployed Final Product: <a href="https://rivenception.github.io/BA3R_REI_Tool/">BA3R: REI Tool</a>
 
-![REI_Tool_demo](./assets/gif/ba3r.gif)
+![REI_Tool_demo](./assets/gif/Ba3R.gif)
 
 
